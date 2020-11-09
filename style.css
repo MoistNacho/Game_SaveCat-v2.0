@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "TmoneyRoundWindExtraBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "TmoneyRoundWindExtraBold";
+  background-color: black;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+section {
+  border: 3px solid rgb(56, 136, 56);
+  border-radius: 30px;
+  background-image: url(img/bg_all.png);
+  background-repeat: no-repeat;
+  background-size: 1120px 630px;
+  width: 1120px;
+  height: 630px;
+}
+
+section nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 150px;
+}
+
+section nav button {
+  font-size: 30px;
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(102, 255, 191, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.548);
+  border-radius: 10px;
+  height: 50px;
+}
+
+section nav .start {
+  position: absolute;
+  top: 45%;
+  font-size: 80px;
+  height: auto;
+}
+
+section nav .timer {
+  display: none;
+  font-size: 30px;
+  margin: 10px 0;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.185);
+  padding: 10px;
+}
+
+section nav .scoreBox {
+  display: none;
+  align-items: center;
+}
+
+section nav .score {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  width: 50px;
+  height: 50px;
+}
+
+section nav .catScore {
+  padding-top: 20px;
+  width: 70px;
+  height: 70px;
+}
+
+section .unitGround {
+  width: 1000px;
+  height: 300px;
+}
+
+.cat {
+  width: 70px;
+  height: 70px;
+}
+
+.ghost {
+  width: 70px;
+  height: 70px;
+}
+
+section .unitGround .cat,
+section .unitGround .ghost {
+  position: absolute;
+  cursor: pointer;
+  transition: all 100ms linear;
+}
+
+button,
+i {
+  transition: transform 100ms linear;
+}
+
+button:hover,
+i:hover,
+.cat:hover,
+.ghost:hover {
+  transform: scale(1.2);
+}
+
+section .stop {
+  color: rgb(201, 37, 37);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  background-color: rgba(41, 41, 41, 0.6);
+  border-radius: 30px;
+  transform: translateY(150px);
+}
+
+.gameover,
+.win {
+  display: none;
+  color: white;
+  font-size: 50px;
+}
+
+.fa-redo {
+  background-color: lightskyblue;
+  border-radius: 10px;
+  border: 3px solid white;
+  color: black;
+  font-size: 50px;
+  padding: 10px;
+  margin-top: 15px;
+
+  cursor: pointer;
+}
