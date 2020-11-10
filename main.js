@@ -74,7 +74,7 @@ function addObj(){
 // 타이머 동작함수
 function timer(){
     alert.play();
-    startBtn.innerHTML = `<i class="fas fa-pause"></i> PAUSE`;
+    startBtn.innerHTML = `<i class="fas fa-pause"></i> PAUSE2`;
     startBtn.classList.add('stop');
     startBtn.classList.remove('start');
         
