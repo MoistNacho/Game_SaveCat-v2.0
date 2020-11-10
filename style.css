@@ -6,6 +6,23 @@
   font-style: normal;
 }
 
+:root {
+  /* font Size */
+  --font-large: 50px;
+  --font-medium: 30px;
+
+  /* border */
+  --border-radius: 10px;
+  --border-base: 3px solid;
+
+  /* gameSize */
+  --game-width: 1120px;
+  --game-height: 630px;
+  --gameObj-size: 70px;
+
+  --animation-transition: transform 100ms linear;
+}
+
 body {
   font-family: "TmoneyRoundWindExtraBold";
   background-color: black;
@@ -17,13 +34,13 @@ body {
 }
 
 section {
-  border: 3px solid rgb(56, 136, 56);
-  border-radius: 30px;
+  border: var(--border-base) rgb(56, 136, 56);
+  border-radius: calc(var(--border-radius) * 3);
   background-image: url(img/bg_all.png);
   background-repeat: no-repeat;
-  background-size: 1120px 630px;
-  width: 1120px;
-  height: 630px;
+  background-size: var(--game-width) var(--game-height);
+  width: var(--game-width);
+  height: var(--game-height);
 }
 
 section nav {
@@ -36,39 +53,41 @@ section nav {
 }
 
 section nav button {
-  font-size: 30px;
+  font-size: var(--font-medium);
   outline: none;
   cursor: pointer;
   background-color: rgba(102, 255, 191, 0.5);
-  border: 3px solid rgba(255, 255, 255, 0.548);
-  border-radius: 10px;
+  border: var(--border-base) rgba(255, 255, 255, 0.548);
+  border-radius: var(--border-radius);
   height: 50px;
 }
 
 section nav .start {
   position: absolute;
   top: 45%;
-  font-size: 80px;
+  font-size: calc(var(--font-large) * 1.5);
   height: auto;
 }
 
 section nav .timer {
   display: none;
-  font-size: 30px;
+  font-size: var(--font-medium);
   margin: 10px 0;
   text-align: center;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   background-color: rgba(255, 255, 255, 0.185);
   padding: 10px;
+  user-select: none;
 }
 
 section nav .scoreBox {
   display: none;
   align-items: center;
+  user-select: none;
 }
 
 section nav .score {
-  font-size: 50px;
+  font-size: var(--font-large);
   text-align: center;
   color: white;
   width: 50px;
@@ -77,35 +96,35 @@ section nav .score {
 
 section nav .catScore {
   padding-top: 20px;
-  width: 70px;
-  height: 70px;
+  width: var(--gameObj-size);
+  height: var(--gameObj-size);
 }
 
 section .unitGround {
-  width: 1000px;
-  height: 300px;
+  width: calc(var(--game-width) * 0.95);
+  height: calc(var(--game-height) / 2);
 }
 
 .cat {
-  width: 70px;
-  height: 70px;
+  width: var(--gameObj-size);
+  height: var(--gameObj-size);
 }
 
 .ghost {
-  width: 70px;
-  height: 70px;
+  width: var(--gameObj-size);
+  height: var(--gameObj-size);
 }
 
 section .unitGround .cat,
 section .unitGround .ghost {
   position: absolute;
   cursor: pointer;
-  transition: all 100ms linear;
+  transition: var(--animation-transition);
 }
 
 button,
 i {
-  transition: transform 100ms linear;
+  transition: var(--animation-transition);
 }
 
 button:hover,
@@ -125,10 +144,10 @@ section .stop {
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 500px;
-  height: 200px;
+  width: calc(var(--game-width) / 2.4);
+  height: calc(var(--game-height) / 3.2);
   background-color: rgba(41, 41, 41, 0.6);
-  border-radius: 30px;
+  border-radius: calc(var(--border-radius) * 3);
   transform: translateY(150px);
 }
 
@@ -136,17 +155,16 @@ section .stop {
 .win {
   display: none;
   color: white;
-  font-size: 50px;
+  font-size: var(--font-large);
 }
 
 .fa-redo {
   background-color: lightskyblue;
-  border-radius: 10px;
-  border: 3px solid white;
+  border-radius: var(--border-radius);
+  border: var(--border-base) white;
   color: black;
-  font-size: 50px;
+  font-size: var(--font-large);
   padding: 10px;
   margin-top: 15px;
-
   cursor: pointer;
 }

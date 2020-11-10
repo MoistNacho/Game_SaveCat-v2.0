@@ -12,6 +12,9 @@ const unitGround = document.querySelector('.unitGround');
 const gameover = document.querySelector('.gameover');
 const win = document.querySelector('.win');
 
+const CAT_COUNT = 10;
+const GHOST_COUNT = 20;
+
 let clock;
 let timeout = 0;
 let score = 0;
@@ -47,7 +50,7 @@ function addObj(){
         unitGroup.setAttribute('class', 'unitGroup');
         unitGround.appendChild(unitGroup);
     
-        for(let i=0; i<10; i++){
+        for(let i=0; i<CAT_COUNT; i++){
             let randomX = Math.random()*unitGround.clientWidth;
             let randomY = Math.random()*unitGround.clientHeight;
             const cat = document.createElement('span');
@@ -58,7 +61,7 @@ function addObj(){
             cat.style.transform = `translate(${randomX}px, ${randomY}px)`;
         }
     
-        for(let i=0; i<20; i++){
+        for(let i=0; i<GHOST_COUNT; i++){
             let randomX = Math.random()*unitGround.clientWidth;
             let randomY = Math.random()*unitGround.clientHeight;
             const ghost = document.createElement('span');
@@ -103,7 +106,7 @@ function resultPop(){
     timeout = 0;
     clearTimeout(clock);
     timeText.innerHTML = `TimeOut<br/>00:0${timeout}`
-    if(score<10 && win.style.display =='none'){
+    if(score<CAT_COUNT && win.style.display =='none'){
         pause.play();
         gameover.style.display = "flex";
 
@@ -131,7 +134,7 @@ unitGround.addEventListener('click', (event)=>{
             catClick.currentTime = 0;
             catClick.play();
     
-            if(score === 10){
+            if(score === CAT_COUNT){
                 timeout = 0;
             }
         } else if(event.target.className ==='ghost'){
