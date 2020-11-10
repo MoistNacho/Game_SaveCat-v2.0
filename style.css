@@ -77,13 +77,23 @@ section nav .timer {
   border-radius: var(--border-radius);
   background-color: rgba(255, 255, 255, 0.185);
   padding: 10px;
+<<<<<<< HEAD
   user-select: none;
+=======
+  user-select:none;
+  cursor:auto;
+>>>>>>> fc93ce54cf93076122481a7f1d39649cbcd49b5f
 }
 
 section nav .scoreBox {
   display: none;
   align-items: center;
+<<<<<<< HEAD
   user-select: none;
+=======
+  user-select:none;
+  cursor:auto;
+>>>>>>> fc93ce54cf93076122481a7f1d39649cbcd49b5f
 }
 
 section nav .score {
