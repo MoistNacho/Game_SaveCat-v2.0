@@ -97,7 +97,7 @@ class Game {
         this.startBtn.classList.add('stop');
         this.startBtn.classList.remove('start');
 
-        if(this.status.level%2 === 0){
+        if(this.status.level%5 === 0){
             this.status.bonusTime++;
         } 
         
