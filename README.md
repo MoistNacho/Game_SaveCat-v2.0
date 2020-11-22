@@ -1,8 +1,8 @@
 # MiniGame - Save Cat V2.0
 
-> 이전 버전의 함수로만 짜여져 있던 코드를 Class로 각 기능별로 나누어서 새로 작성했습니다.
+> 이전 버전의 함수로만 짜여져 있던 코드를 Class로 각 기능별로 나누어서 새로 작성했습니다. 추가적으로 기존에 가만히 있던 유령 오브젝트를 랜덤하게 움직이도록 변경하였고, 게임에서 승리 할때마다 게임의 레벨이 올라갑니다.  
 
-Demo :
+Demo : https://moistnacho.github.io/Game_SaveCat-v2.0/
 
 ## 게임방법
 
@@ -15,4 +15,4 @@ Demo :
 
 ## Preview
 
-![SaveCat](https://user-images.githubusercontent.com/59498305/98499630-6aa71500-228d-11eb-9c84-9175c40351e6.png)
+![SaveCat-V2 0](https://user-images.githubusercontent.com/59498305/99899626-1e78bd80-2cee-11eb-80c3-d87151be84b5.PNG)
