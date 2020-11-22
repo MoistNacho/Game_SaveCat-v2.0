@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <script type="module" src="src/main.js" defer></script>
     <script src="https://kit.fontawesome.com/91d7b0a87a.js" crossorigin="anonymous"></script>
     <title>Save Cat!</title>
 </head>
@@ -13,22 +13,18 @@
         <nav class="menu">
             <button class="start"><i class="fas fa-play"></i> START</button>
             <span class="timer">TimeOut<br/> 00:00 </span>
+            <span class="level">LEVEL ?</span>        
             <div class="scoreBox">
                 <img class="catScore" src="img/cat.png" alt="catScore">
                 <span class="score"> 0 </span>
-            </div>
-            
+            </div>          
         </nav>
         <article class="unitGround">
         </article>
     </section>
-    <div class="result gameover">
-        <span>You Lost...</span>
-        <i class="fas fa-redo"></i>
-    </div>
-    <div class="result win">
-        <span>You Win!</span>
-        <i class="fas fa-redo"></i>
+    <div class="result">
+        <span class="text">What</span>
+        <i class="processBtn fas fa-redo"></i>
     </div>
 </body>
 </html>

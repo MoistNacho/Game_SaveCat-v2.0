@@ -77,23 +77,19 @@ section nav .timer {
   border-radius: var(--border-radius);
   background-color: rgba(255, 255, 255, 0.185);
   padding: 10px;
-<<<<<<< HEAD
   user-select: none;
-=======
-  user-select:none;
-  cursor:auto;
->>>>>>> fc93ce54cf93076122481a7f1d39649cbcd49b5f
+}
+
+section nav .level {
+  display: none;
+  color: white;
+  font-size: 30px;
 }
 
 section nav .scoreBox {
   display: none;
   align-items: center;
-<<<<<<< HEAD
   user-select: none;
-=======
-  user-select:none;
-  cursor:auto;
->>>>>>> fc93ce54cf93076122481a7f1d39649cbcd49b5f
 }
 
 section nav .score {
@@ -129,19 +125,24 @@ section .unitGround .cat,
 section .unitGround .ghost {
   position: absolute;
   cursor: pointer;
-  transition: var(--animation-transition);
+  transition: all 200ms linear;
+  transition: transform 2000ms linear;
 }
 
 button,
-i {
+.processBtn {
   transition: var(--animation-transition);
 }
 
 button:hover,
-i:hover,
+.processBtn:hover {
+  transform: scale(1.2);
+}
+
 .cat:hover,
 .ghost:hover {
-  transform: scale(1.2);
+  width: calc(var(--gameObj-size) * 1.2);
+  height: calc(var(--gameObj-size) * 1.2);
 }
 
 section .stop {
@@ -149,7 +150,7 @@ section .stop {
 }
 
 .result {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -159,16 +160,11 @@ section .stop {
   background-color: rgba(41, 41, 41, 0.6);
   border-radius: calc(var(--border-radius) * 3);
   transform: translateY(150px);
-}
-
-.gameover,
-.win {
-  display: none;
   color: white;
   font-size: var(--font-large);
 }
 
-.fa-redo {
+.processBtn {
   background-color: lightskyblue;
   border-radius: var(--border-radius);
   border: var(--border-base) white;
