@@ -16,3 +16,5 @@ Demo : https://moistnacho.github.io/Game_SaveCat-v2.0/
 ## Preview
 
 ![SaveCat-V2 0](https://user-images.githubusercontent.com/59498305/99899626-1e78bd80-2cee-11eb-80c3-d87151be84b5.PNG)
+
+![SaveCat](https://user-images.githubusercontent.com/59498305/104272518-9be7cf80-54e0-11eb-955e-56a0a30287b6.gif)
